@@ -1,6 +1,2 @@
 /assign1.pdf
-/os.o
-/print.o
-/process.o
-/schedulingAlgo.o
-/time.o
+*.o
