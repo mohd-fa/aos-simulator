@@ -35,4 +35,17 @@ void scissos_initialise() {
     int lenReadyQ = 0;
     srand(time(NULL));
     gettimeofday(&_basetime, NULL);
+    for(int i = 0; i < MAXPROC; i++) {
+        _proctable[i] = NULL;
+        _readyQ[i] = -1;
+        pr_times[i].crt_time.tv_sec = 0;
+        pr_times[i].crt_time.tv_usec = 0;
+        pr_times[i].rsp_time.tv_sec = 0;
+        pr_times[i].rsp_time.tv_usec = 0;
+        pr_times[i].wt_time.tv_sec = 0;
+        pr_times[i].wt_time.tv_usec = 0;
+        pr_times[i].run_time.tv_sec = 0;
+        pr_times[i].run_time.tv_usec = 0;
+    }
+
 }
